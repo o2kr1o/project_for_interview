@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>生年月日入力フォーム</title>
+</head>
+<body>
+	<h3>生年月日を入力してください。</h3>
+	<form id="form" method="POST">
+		<div>
+			<select id="select_year" name="year"></select>年
+			<select id="select_month" name="month"></select>月
+			<select id="select_day" name="day"></select>日
+		</div>
+		<input type="submit" value="送信" />
+	</form>
+	<script th:src="@{/js/birthdayInput.js}"></script>
+</body>
+</html>

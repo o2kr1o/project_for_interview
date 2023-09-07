@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>誕生日関連情報</title>
+	<link th:href="@{/css/birthdayInfo.css}" rel="styleSheet">
+</head>
+<body>
+	<h3>誕生日関連情報を表示します。</h3>
+	<table class="my-table">
+		<thead>
+			<tr>
+				<th>生まれた日から今日までの日数</th>
+				<th>星座</th>
+				<th>干支</th>
+			<tr>
+		</thead>
+		<tbody>
+			<tr class="responseList" th:each="response:${responseList}" th:object="${response}">
+				<td align="center" valign="middle" th:text="*{days}"></td>
+				<td align="center" valign="middle" th:text="*{zodiacSign}"></td>
+				<td align="center" valign="middle" th:text="*{chineseZodiac}"></td>
+			</tr>
+		</tbody>
+	</table>
+	<div>
+		<a class="btn btn-link" href="/birthdayInput">生年月日入力フォームへ戻る</a>
+	</div>
+</body>
+</html>

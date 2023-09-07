@@ -1,0 +1,13 @@
+.my-table {
+	border-collapse: collapse;
+	width: 750px;
+	table-layout: fixed;
+}
+
+.my-table * {
+	border: 1px #000 solid;
+	width:100px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
